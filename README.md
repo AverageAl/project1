@@ -25,11 +25,9 @@ Each member explains how his part fits into whole business.)
 
 6: Whole project on repository with good branching
 
-7: Consistent code styling (using CSS, SLDS, HTML, VisualForce)
+7: Cloud site has uniform styling (using CSS, SLDS, HTML, VisualForce)
 
-8: Cloud site has uniform styling
-
-9: Live demo includes
+8: Live demo includes
   (1) clone the master branch of your repo;
   (2) push the customization to a fresh org 
 
