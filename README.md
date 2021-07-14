@@ -27,8 +27,8 @@ Product Backlog
 7: Entire project on repository with good branching
 
 8: Live demo includes
-  -1: clone the master branch of your repo
-  -2: push the customization to a fresh org 
+  (1) clone the master branch of your repo;
+  (2) push the customization to a fresh org 
 
 9: Document SDLC practices using Scrumban 
  
