@@ -1,15 +1,19 @@
 # project1
-Project 1 repository for the Fab Five
+Project 1 Repository for the Fab Five - **DUE 7/28/2021**
 
-Visualforce Experience Cloud Site - Summary Product Backlog
-Product Owner J. Hayhurst
-(https://discord.com/channels/470989974142058508/864934290882166794)
-- due 7/28/2021 
-- 10-15 minutes total
+Visualforce Experience Cloud Site  
+Summary Product Backlog  
+  
 
-Product Backlog 
-(Each of the first four user stories should be handled by one/two team members.
-Each member explains how his part fits into whole business.)
+Product Owner: J. Hayhurst  
+https://discord.com/channels/470989974142058508/864934290882166794
+<br />
+<br />    
+# Product Backlog   
+
+Each of the first four user stories should be handled by one/two team members.  
+Each member explains how his part fits into whole business.  
+10-15 minutes total.
 
 1: Visualforce page(s) contain some feature relevant to business
 
