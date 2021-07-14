@@ -33,5 +33,7 @@ Each member explains how his part fits into whole business.)
   (1) clone the master branch of your repo;
   (2) push the customization to a fresh org 
 
-10: Bonus: deploy the site in the new org (can be much trickier) 
+--
+
+Bonus: deploy the site in the new org (can be much trickier) 
 
