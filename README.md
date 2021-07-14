@@ -1,12 +1,14 @@
 # project1
 Project 1 repository for the Fab Five
 
-Visualforce Experience Cloud Site Requirements
+Visualforce Experience Cloud Site - Summary Product Backlog
+Product Owner J. Hayhurst
+(https://discord.com/channels/470989974142058508/864934290882166794)
 - due 7/28/2021 
 - 10-15 minutes total
 
-
-Product Backlog (First four user stories highlighted by Product Owner J. Hayhurst)
+Product Backlog 
+(Each of the first four user stories should be handled by one/two team members)
 
 1: Visualforce page(s) containing some feature relevant to business
 
@@ -16,7 +18,7 @@ Product Backlog (First four user stories highlighted by Product Owner J. Hayhurs
 
 4: Any additional declarative customization required to support feature
 
-
+--
 
 5: Cloud site contains uniform styling
 
