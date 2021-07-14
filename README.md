@@ -2,8 +2,8 @@
 Project 1 repository for the Fab Five
 
 Visualforce Experience Cloud Site Requirements
-due 7/28/2021 
-10-15 minutes total
+- due 7/28/2021 
+- 10-15 minutes total
 
 
 Product Backlog
