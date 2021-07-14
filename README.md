@@ -6,7 +6,7 @@ Visualforce Experience Cloud Site Requirements
 - 10-15 minutes total
 
 
-Product Backlog
+Product Backlog (First four user stories highlighted by Product Owner J. Hayhurst)
 
 1: Visualforce page(s) containing some feature relevant to business
 
@@ -15,6 +15,8 @@ Product Backlog
 3: Testing coverage for the Apex used
 
 4: Any additional declarative customization required to support feature
+
+
 
 5: Cloud site contains uniform styling
 
