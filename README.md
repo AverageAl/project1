@@ -12,8 +12,8 @@ https://discord.com/channels/470989974142058508/864934290882166794
 # Product Backlog   
 
 Each of the first four user stories should be handled by one/two team members.  
-Each member explains how his part fits into whole business.  
-10-15 minutes total.
+Each member will explain how his part fits into whole business.  
+10-15 minute total presentation.
 
 1: Visualforce page(s) contains some feature relevant to business
 
