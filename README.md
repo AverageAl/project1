@@ -15,7 +15,7 @@ Each of the first four user stories should be handled by one/two team members.
 Each member explains how his part fits into whole business.  
 10-15 minutes total.
 
-1: Visualforce page(s) contain some feature relevant to business
+1: Visualforce page(s) contains some feature relevant to business
 
 2: Apex controller or controller extension for said feature 
 
