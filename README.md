@@ -11,9 +11,10 @@ https://discord.com/channels/470989974142058508/864934290882166794
 <br />    
 # Product Backlog   
 
-Each of the first four user stories should be handled by one/two team members.  
-Each member will explain how his part fits into whole business.  
-10-15 minute total presentation.
+Each member will explain how his part fits into the whole business
+during a 10-15 minute total presentation.
+
+Each member of the team will be responsible for at minimum:  
 
 1: Visualforce page(s) contains some feature relevant to business
 
@@ -24,6 +25,8 @@ Each member will explain how his part fits into whole business.
 4: Any additional declarative customization required to support feature
 
 --
+
+Other requirements:
 
 5: Documented SDLC practices using Scrumban
 
