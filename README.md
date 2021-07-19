@@ -14,7 +14,7 @@ https://discord.com/channels/470989974142058508/864934290882166794
 Each member will explain how his part fits into the whole business
 during a 10-15 minute total presentation.
 
-Each member of the team will be responsible for at minimum:  
+Each team member will individually create, at least, the following four features:  
 
 1: Visualforce page(s) contains some feature relevant to business
 
@@ -26,7 +26,7 @@ Each member of the team will be responsible for at minimum:
 
 --
 
-Other requirements:
+Other, team-wide requirements:
 
 5: Documented SDLC practices using Scrumban
 
