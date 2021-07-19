@@ -29,7 +29,7 @@ Each team member will individually create, at least, the following four features
 Other, team-wide requirements:
 
 5: Documented SDLC practices using Scrumban 
-  notes: https://docs.google.com/document/d/1wvmJjwbUC6_iYP11ttI0k7McmyjqZMGL
+  standup notes: https://docs.google.com/document/d/1wvmJjwbUC6_iYP11ttI0k7McmyjqZMGL
   kanban:
   
 6: Whole project on repository with good branching
