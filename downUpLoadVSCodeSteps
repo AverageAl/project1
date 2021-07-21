@@ -1,13 +1,17 @@
-Steps:
-In visual studio code
+To download a new org:
+In visual studio code, use search bar to
 - Create with manifest
 - authorize the org
 - retrieve source from org
-- in the package.xml file add
+Then, in the Explorer bar on the right of the page, in the package.xml file add
     <types>
             <members>*</members>
             <name>CustomObject</name>
         </types>
 
+Again in the search bar:
 - retrieve source from org
+
+Then to put the org onto github, after whatever steps needed to set up github and 
+pick a folder to act as the repository on your computer, from that folder:
 - commit changes and push
