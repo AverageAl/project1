@@ -1,0 +1,13 @@
+Steps:
+In visual studio code
+- Create with manifest
+- authorize the org
+- retrieve source from org
+- in the package.xml file add
+    <types>
+            <members>*</members>
+            <name>CustomObject</name>
+        </types>
+
+- retrieve source from org
+- commit changes and push
