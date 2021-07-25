@@ -2,14 +2,13 @@
 Project 1 Repository for the Fab 5 - **DUE 7/28/2021**
 
 Visualforce Experience Cloud Site  
-Summary Product Backlog  
+Itemized Summary Product Backlog
   
-
-Product Owner: J. Hayhurst  
-https://discord.com/channels/470989974142058508/864934290882166794
+Product Owner: J. Hayhurst <br/>
+Official Product Backlog: https://discord.com/channels/470989974142058508/864934290882166794
 <br />
 <br />    
-# Product Backlog   
+# Itemized Summary Product Backlog   
 
 Each member will explain how his part fits into the whole business
 during a 10-15 minute total presentation.
@@ -36,7 +35,7 @@ Other, team-wide requirements:
   
 6: Whole project on repository with good branching
 
-7: Cloud site has uniform styling/branding (using CSS, SLDS, HTML, VisualForce)
+7: Experience Cloud site has uniform styling/branding (using CSS, SLDS, HTML, VisualForce)
 
 8: Live demo includes
   <br/>
