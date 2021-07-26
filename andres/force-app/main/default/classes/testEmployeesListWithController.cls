@@ -54,7 +54,7 @@
         
 		List<Employee__c> mixedEmloyeeList = EmployeesListWithController.getEmployees();  	// (5)
         		
-		System.assertEquals(numOfRealEmployees+200, mixedEmloyeeList.size());			  //(6)
+		System.assertEquals(numOfRealEmployees+200, mixedEmloyeeList.size());			 	// (6)
 	}            
     
 }
