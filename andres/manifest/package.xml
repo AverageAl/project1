@@ -6,10 +6,6 @@
     </types>
     <types>
         <members>*</members>
-        <name>CustomObject</name>
-    </types>
-    <types>
-        <members>*</members>
         <name>ApexComponent</name>
     </types>
     <types>
@@ -35,6 +31,14 @@
     <types>
         <members>*</members>
         <name>StaticResource</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApprovalProcess</name>
     </types>
     <version>52.0</version>
 </Package>
