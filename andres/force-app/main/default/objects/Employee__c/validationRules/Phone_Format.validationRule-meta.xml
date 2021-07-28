@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_Format</fullName>
+    <active>true</active>
+    <description>Checks to see that the number only has 10 digits.</description>
+    <errorConditionFormula>NOT( REGEX( Phone_Number__c  , &quot;\\D*?(\\d\\D*?){10}&quot;) )</errorConditionFormula>
+    <errorDisplayField>Phone_Number__c</errorDisplayField>
+    <errorMessage>Phone Number must have 10 digits.</errorMessage>
+</ValidationRule>
