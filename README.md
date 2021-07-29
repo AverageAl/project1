@@ -29,14 +29,20 @@ Each team member will individually create, at least, the following four features
 Other, team-wide requirements:
 
 5: Documented SDLC practices using Scrumban
-
+  <br/>
+    - standup notes: https://docs.google.com/document/d/1wvmJjwbUC6_iYP11ttI0k7McmyjqZMGL
+  <br/>
+    - kanban:
+  
 6: Whole project on repository with good branching
 
 7: Cloud site has uniform styling/branding (using CSS, SLDS, HTML, VisualForce)
 
 8: Live demo includes
-  (1) clone the master branch of your repo;
-  (2) push the customization to a fresh org 
+  <br/>
+      (1) clone the master branch of your repo; 
+  <br/> 
+      (2) push the customization to a fresh org 
 
 --
 
