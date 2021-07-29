@@ -1,0 +1,13 @@
+<apex:page controller="EmployeesListWithController" lightningStyleSheet='true'>
+    <apex:form >
+        <apex:pageBlock title="Employees List" id="employees_list">
+            <!-- Employees List -->
+			<apex:pageBlockTable value="{! employees }" var="employee">
+				<apex:column value="{! employee.Name }"/>
+				<apex:column value="{! employee.Phone_Number__c }"/>
+				<apex:column value="{! employee.City__c }"/>
+				<apex:column value="{! employee.Zip_Code__c }"/>
+			</apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
