@@ -1,0 +1,9 @@
+<apex:page standardController="Lot__c" recordSetVar="lots" lightningStylesheets="true">
+    <apex:pageBlock >
+        <apex:pageBlockTable title="Lots" value="{!lots}" var="lot">
+            <apex:column value="{!lot.Name}"/>
+            <apex:column value="{!lot.Vehicle_Type__c}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>
+             
