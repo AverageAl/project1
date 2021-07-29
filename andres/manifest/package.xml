@@ -6,10 +6,6 @@
     </types>
     <types>
         <members>*</members>
-        <name>CustomObject</name>
-    </types>
-    <types>
-        <members>*</members>
         <name>ApexComponent</name>
     </types>
     <types>
@@ -39,6 +35,19 @@
     <types>
         <members>*</members>
         <name>StaticResource</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApprovalProcess</name>
+    </types>
+    <types>
+        <members>seller_request_emails/Seller_request_approval_email</members>
+        <members>seller_request_emails/Seller_request_rejection_email</members>
+        <name>Emailtemplate</name>
     </types>
     <version>52.0</version>
 </Package>

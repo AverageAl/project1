@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Car_Brand__c</fullName>
+    <description>The sellers car brand of the car they are selling</description>
+    <externalId>false</externalId>
+    <label>Car Brand</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Car_Brands</valueSetName>
+    </valueSet>
+</CustomField>
