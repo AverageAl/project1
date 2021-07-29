@@ -10,7 +10,9 @@
              <!--vehicle list-->
              <apex:pageBlockTable value="{!vehicles}" var="vehicle">
                 <apex:column headerValue="Vehicle link">
-                	<apex:outputlink value="/{!vehicle.Id}">{!vehicle.Name}</apex:outputlink> 
+                	<apex:outputLink value="https://simonsauto-developer-edition.na162.force.com/SimonsAutos/VehicleDetail">{!vehicle.Name}
+       					 <apex:param name="id" value="{!vehicle.Id}"/>
+					</apex:outputLink>
                 </apex:column> 
                 <apex:column value="{!vehicle.Year__c}"/>  
                 <apex:column value="{!vehicle.Price__c}"/>
@@ -41,7 +43,7 @@
                     </td>
                     <td align="right">
                         <!-- Records per page -->
-                        Records per page:
+                        Vehicles per page:
                         <apex:selectList value="{! PageSize }" size="1">
                             <apex:selectOption itemValue="5" itemLabel="5"/>
                             <apex:selectOption itemValue="10" itemLabel="10"/>
