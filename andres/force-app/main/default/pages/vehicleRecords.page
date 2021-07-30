@@ -1,0 +1,7 @@
+<apex:page standardController="Vehicle__c" recordSetVar="vehicles" lightningStylesheets="true">
+    <apex:pageBlock >
+        <apex:pageBlockTable title="Vehicles" value="{!vehicles}" var="vehicle">
+            <apex:column value="{!vehicle.Name}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

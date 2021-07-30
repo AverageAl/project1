@@ -1,4 +1,6 @@
-@istest(seeAllData='true') class TestEmployeesListWithController3
+
+
+@istest(seeAllData='true') class TestEmployeesListWithController
 {	
 
     // This method positively tests the controller class for success with a single record insert.
@@ -23,6 +25,7 @@
 		List<Employee__c> newEmployeeList = EmployeesListWithController.getEmployees();  	// (3.1)
         System.assertEquals(newEmployeeList.size(), 1);			  							// (3.2)
 	} 
+
 
     // The following method positively bulk tests the controller class with a 200-record insert.	
 	
@@ -56,5 +59,26 @@
         		
 		System.assertEquals(numOfRealEmployees+200, mixedEmloyeeList.size());			 	// (6)
 	}            
+
+    // The following negative test induces error in the controller class in the case of no employees.
     
+    @isTest static void negativeEmployeeListTest ()
+    {
+        List<Employee__c> realEmployeesList = EmployeesListWithController.getEmployees(); 
+        delete realEmployeesList;
+        
+        System.test.startTest();
+        Boolean flag = false;
+        try
+        {
+        	EmployeesListWithController.getEmployees();
+        }
+        catch(EmployeeException e)
+        {
+            if(e.getMessage()=='Help Wanted--drive in and get hired in!')
+               {flag=true;}
+        }              
+        system.assert(flag);
+    }
 }
+

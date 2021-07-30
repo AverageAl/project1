@@ -1,0 +1,46 @@
+<apex:page standardController="Vehicle__c" lightningStylesheets="true" extensions="SingleCarRecordExtension">
+    <apex:slds >
+        <apex:outputText value="For {!vehicle.Listed_As__c},"/><br/>
+        <apex:outputText value="{!vehicle.Year__c} {!vehicle.Name}"/><br/><br/>
+        <div class="slds-grid slds-gutters">
+        	<div class="slds-col slds-size_1-of-2">
+                <apex:image value="{!vehicle.Image__c}"/><br/><br/>
+                <br/>
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-size_1-of-3">
+        				<apex:outputText value="{!vehicle.Type__c}"/>
+            		</div>
+                	<div class="slds-col slds-size_1-of-3">
+        				<apex:outputText value="{!vehicle.Mileage__c}"/>
+            		</div>
+            		<div class="slds-col slds-size_1-of-3">
+        				<apex:outputText value="{!vehicle.Transmission__c}"/>
+           			</div>
+                </div>
+            </div>
+        	<div class="slds-col slds-size_1-of-4">
+            	<apex:outputText value="{!vehicle.Price__c}"/><br/>
+                <apex:outputText value="{!vehicle.Price__c / 72} per month (for 72 months)"/><br/>        
+                <apex:form style="background-color: lightblue">
+                    <apex:outputText value="{!vehicle.Lot__r.Name}"/><br/>
+                    <apex:outputText value="{!vehicle.Lot__r.Employee__r.Name}"/><br/>
+                    <apex:outputText value="{!vehicle.Lot__r.Employee__r.Phone_Number__c}"/><br/>
+                    Message:<br/>
+                    <apex:inputText value="{!email.TextBody}"/><br/>
+                    <div class="slds-grid slds-gutters">
+                    	<div class="slds-col slds-size_1-of-4">
+                        	Full Name:<br/>
+                            <apex:inputText value="{!email.FromName}"/><br/>
+                        	Email Address:<br/>
+                            <apex:inputText value="{!email.FromAddress}"/><br/>
+                            <apex:commandButton value="Send Email" action="{!sendEmail}"/>
+                    	</div>
+                    </div>
+                </apex:form>
+            </div>
+        </div>
+        <br/>
+        Please call or email to set an appointment with a salesperson.<br/>
+        Simon's Auto Center is not responsible for any errors, omissions or inaccurate prices that may be reflected on this website. For accurate information and pricing on this or any of our vehicles, please contact us directly. Thank you for your consideration.<br/>
+    </apex:slds>
+</apex:page>

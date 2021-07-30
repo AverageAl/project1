@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <label>Lot</label>
     <lookupFilter>
-        <active>true</active>
+        <active>false</active>
         <filterItems>
             <field>$Source.Type__c</field>
             <operation>equals</operation>
