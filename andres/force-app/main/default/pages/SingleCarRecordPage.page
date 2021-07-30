@@ -1,40 +1,44 @@
-<apex:page standardController="Vehicle__c" lightningStylesheets="true" extensions="SingleCarRecordExtension">
+<apex:page standardController="Vehicle__c" recordSetVar="vehicles" extensions="MassInventoryExtension" lightningStylesheets="true">
     <apex:slds >
-        <apex:outputText value="For {!vehicle.Listed_As__c},"/><br/>
-        <apex:outputText value="{!vehicle.Year__c} {!vehicle.Name}"/><br/><br/>
         <div class="slds-grid slds-gutters">
-        	<div class="slds-col slds-size_1-of-2">
-                <apex:image value="{!vehicle.Image__c}"/><br/><br/>
+            <div class="slds-col slds-size_1-of-2">
+                <apex:outputText value="For {!v.Listed_As__c},"/><br/>
+        		<apex:outputText value="{!v.Year__c} {!v.Name}"/><br/><br/>
+                <apex:image value="{!v.Image__c}"/><br/><br/>
                 <br/>
                 <div class="slds-grid slds-gutters">
                     <div class="slds-col slds-size_1-of-3">
-        				<apex:outputText value="{!vehicle.Type__c}"/>
-            		</div>
-                	<div class="slds-col slds-size_1-of-3">
-        				<apex:outputText value="{!vehicle.Mileage__c}"/>
-            		</div>
-            		<div class="slds-col slds-size_1-of-3">
-        				<apex:outputText value="{!vehicle.Transmission__c}"/>
-           			</div>
+                        Type:<br/>
+                        <apex:outputText value="{!v.Type__c}"/>
+                    </div>
+                    <div class="slds-col slds-size_1-of-3">
+                        Mileage:<br/>
+                        <apex:outputText value="{!v.Mileage__c}"/>
+                    </div>
+                    <div class="slds-col slds-size_1-of-3">
+                        Transmission:<br/>
+                        <apex:outputText value="{!v.Transmission__c}"/>
+                    </div>
                 </div>
             </div>
-        	<div class="slds-col slds-size_1-of-4">
-            	<apex:outputText value="{!vehicle.Price__c}"/><br/>
-                <apex:outputText value="{!vehicle.Price__c / 72} per month (for 72 months)"/><br/>        
-                <apex:form style="background-color: lightblue">
-                    <apex:outputText value="{!vehicle.Lot__r.Name}"/><br/>
-                    <apex:outputText value="{!vehicle.Lot__r.Employee__r.Name}"/><br/>
-                    <apex:outputText value="{!vehicle.Lot__r.Employee__r.Phone_Number__c}"/><br/>
+            <div class="slds-col slds-size_1-of-4">
+                <apex:form >
+                    <apex:commandButton style="float : left" value="Back" action="{!massInventory}" title="Back"/><br/><br/>
+                	<apex:outputText value="Price: {!v.Price__c}"/><br/>
+                    <apex:outputText value="{!monthlyPrice} per month (for 72 months)"/><br/><br/>       
+                    <apex:outputText value="Lot: {!v.Lot__r.Name}"/><br/>
+                    <apex:outputText value="Owner: {!v.Lot__r.Employee__r.Name}"/><br/>
+                    <apex:outputText value="Phone: {!v.Lot__r.Employee__r.Phone_Number__c}"/><br/><br/>
                     Message:<br/>
                     <apex:inputText value="{!email.TextBody}"/><br/>
                     <div class="slds-grid slds-gutters">
-                    	<div class="slds-col slds-size_1-of-4">
-                        	Full Name:<br/>
+                        <div class="slds-col slds-size_1-of-4">
+                            Name:<br/>
                             <apex:inputText value="{!email.FromName}"/><br/>
-                        	Email Address:<br/>
+                            Email:<br/>
                             <apex:inputText value="{!email.FromAddress}"/><br/>
                             <apex:commandButton value="Send Email" action="{!sendEmail}"/>
-                    	</div>
+                        </div>
                     </div>
                 </apex:form>
             </div>

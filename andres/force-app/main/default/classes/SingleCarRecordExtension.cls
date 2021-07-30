@@ -1,5 +1,4 @@
 public class SingleCarRecordExtension {
-    
     public Vehicle__c vehicle{get; set;}
     public EmailMessage email{get; set;}
     
@@ -7,7 +6,7 @@ public class SingleCarRecordExtension {
         vehicle = (Vehicle__c) sc.getRecord();
         email = new EmailMessage();
     }
-
+    
     public void sendEmail(){
         try{
             insert email;

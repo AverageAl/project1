@@ -1,5 +1,4 @@
-<apex:page standardController="Seller_Request__c" lightningStylesheets="true"
->
+<apex:page standardController="Seller_Request__c" lightningStylesheets="true" extensions="SellersController">
     <apex:pageBlock title="Simons Used Cars">
         <h1>
             Sellers Page

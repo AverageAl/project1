@@ -3,8 +3,7 @@
     <apiVersion>52.0</apiVersion>
     <availableInTouch>true</availableInTouch>
     <confirmationTokenRequired>false</confirmationTokenRequired>
-    <description></description>
-    <label>EmployeeListWithControllerVF</label>
+    <label>EmployeesListWithControllerVF</label>
     <packageVersions>
         <majorNumber>1</majorNumber>
         <minorNumber>7</minorNumber>
