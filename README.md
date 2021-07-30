@@ -37,12 +37,6 @@ Other, team-wide requirements:
 
 7: Experience Cloud site has uniform styling/branding (using CSS, SLDS, HTML, VisualForce)
 
-8: Live demo includes
-  <br/>
-      (1) clone the master branch of your repo; 
-  <br/> 
-      (2) push the customization to a fresh org 
-
 --
 
 Bonus: deploy the site in the new org (can be much trickier) 
