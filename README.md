@@ -1,7 +1,7 @@
 # project2
 Project 2 Repository for the Fab 5 - **DUE 8/13/2021**
 
-Aura Components Experience Cloud Site  
+Aura-Components-Enhanced Experience Cloud Site  
 Itemized Summary Product Backlog
   
 Product Owner: J. Hayhurst <br/>
