@@ -21,11 +21,11 @@ Each member of the team will be responsible for at minimum:
 User Story 1: Migrating a Feature from a Visualforce Page that you didn't work on to the Aura Component Model.<br>
   
   1. Branch features re-assigned for refactoring with Aura components:	
-      US1.1: H-J: Henry VF feature branch -> Jeremy
-	    US1.2: S-Al: Sukhraj VF feature -> Al
-	    US1.3 An-S: Andres VF feature -> Sukhraj
-      US1.4 Al-An: Al VF feature -> Andres
-      US1.5 J-H: Jeremy VF feature -> Henry
+      US1.1: H-J: Henry VF feature branch -> Jeremy<br>
+	    US1.2: S-Al: Sukhraj VF feature -> Al<br>
+	    US1.3 An-S: Andres VF feature -> Sukhraj<br>
+      US1.4 Al-An: Al VF feature -> Andres<br>
+      US1.5 J-H: Jeremy VF feature -> Henry<br>
 
 User Story 2: An additional Aura Component containing some feature relevant to the business. <br>
 User Story 3: Apex and JavaScript controller code for said feature.<br>
