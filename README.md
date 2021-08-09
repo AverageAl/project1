@@ -5,7 +5,7 @@ Aura Components Experience Cloud Site
 Itemized Summary Product Backlog
   
 Product Owner: J. Hayhurst <br/>
-Official Product Backlog:https://discord.com/channels/470989974142058508/870676889377845268
+Official Product Backlog: https://discord.com/channels/470989974142058508/870676889377845268
 <br />
 <br />    
 # Itemized Product Backlog   
