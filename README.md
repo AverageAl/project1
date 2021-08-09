@@ -8,18 +8,15 @@ Product Owner: J. Hayhurst <br/>
 Official Product Backlog: https://discord.com/channels/470989974142058508/870676889377845268
 <br />
 <br />    
-# Itemized Product Backlog   
+# Summarized Itemized Product Backlog   
 
-Your presentation and live demo combo should last for no more than 15 minutes,
-with each team member showcasing their particular feature set and how it ties
-into the business needs as a whole.
+Each member will explain how his part fits into the whole business during a 10-15 minute total presentation.
 
-From Visualforce to Lightning, taking on new iterations of an existing project 
-and migrating from Visualforce pages to an SPA using Lightning Aura components.
+Iterate on existing project, migrate from Visualforce pages to an SPA using Lightning Aura components.
+Collaborate on project 1 as the base, expand upon its behind the scenes features with a customer facing experience cloud site 
+that utilizes an Aura SPA. 
 
-As a part of this project, you team will collaborate on your groups assigned P1 as the base, 
-and expand upon its behind the scenes features with a customer facing experience cloud site 
-that utilizes an Aura SPA. Each member of the team will be responsible for at minimum:
+Each member of the team will be responsible for at minimum:
 
 User Story 1: Migrating a Feature from a Visualforce Page that you didn't work on to the Aura Component Model.<br>
   
