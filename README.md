@@ -22,6 +22,14 @@ and expand upon its behind the scenes features with a customer facing experience
 that utilizes an Aura SPA. Each member of the team will be responsible for at minimum:
 
 User Story 1: Migrating a Feature from a Visualforce Page that you didn't work on to the Aura Component Model.<br>
+  
+  1. Branch features re-assigned for refactoring with Aura components:	
+      US1.1: H-J: Henry VF feature branch -> Jeremy
+	    US1.2: S-Al: Sukhraj VF feature -> Al
+	    US1.3 An-S: Andres VF feature -> Sukhraj
+      US1.4 Al-An: Al VF feature -> Andres
+      US1.5 J-H: Jeremy VF feature -> Henry
+
 User Story 2: An additional Aura Component containing some feature relevant to the business. <br>
 User Story 3: Apex and JavaScript controller code for said feature.<br>
 User Story 4: Testing coverage for the Apex used.<br>
@@ -52,3 +60,4 @@ User Story 10: Live demo includes
 
 Bonus: deploy the site in the new org (can be much trickier) 
 
+--
