@@ -8,7 +8,7 @@ Product Owner: J. Hayhurst <br/>
 Official Product Backlog: https://discord.com/channels/470989974142058508/870676889377845268
 <br />
 <br />    
-# Summarized Itemized Product Backlog   
+# Itemized Summary Product Backlog   
 
 Each member will explain how his part fits into the whole business during a 10-15 minute total presentation.
 
