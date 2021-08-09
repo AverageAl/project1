@@ -8,7 +8,7 @@ Product Owner: J. Hayhurst <br/>
 Official Product Backlog:https://discord.com/channels/470989974142058508/870676889377845268
 <br />
 <br />    
-# Itemized Summary Product Backlog   
+# Itemized Product Backlog   
 
 Your presentation and live demo combo should last for no more than 15 minutes,
 with each team member showcasing their particular feature set and how it ties
@@ -21,12 +21,12 @@ As a part of this project, you team will collaborate on your groups assigned P1 
 and expand upon its behind the scenes features with a customer facing experience cloud site 
 that utilizes an Aura SPA. Each member of the team will be responsible for at minimum:
 
-User Story 1: Migrating a Feature from a Visualforce Page that you didn't work on to the Aura Component Model.
-User Story 2: An additional Aura Component containing some feature relevant to the business.
-User Story 3: Apex and JavaScript controller code for said feature.
-User Story 4: Testing coverage for the Apex used.
-User Story 5: Any additional declarative customization required to support the features.
-User Story 6: Help in implementing a Sales Cloud and Service Cloud solution and customization to support the business.
+User Story 1: Migrating a Feature from a Visualforce Page that you didn't work on to the Aura Component Model.<br>
+User Story 2: An additional Aura Component containing some feature relevant to the business. <br>
+User Story 3: Apex and JavaScript controller code for said feature.<br>
+User Story 4: Testing coverage for the Apex used.<br>
+User Story 5: Any additional declarative customization required to support the features.<br>
+User Story 6: Help in implementing a Sales Cloud and Service Cloud solution and customization to support the business.<br>
 
 --
 
