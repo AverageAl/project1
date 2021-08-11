@@ -1,0 +1,76 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+    
+     <aura:attribute name="record" type="Object"/>
+    <aura:attribute name="VehicleRecord" type="Object" />
+    <aura:attribute name="recordError" type="String"/>
+    
+    <force:recordData aura:id="record"
+                      layoutType="FULL"
+                      recordId="{!v.recordId}"
+                      targetError="{!v.recordError}"
+                      targetRecord="{!v.record}"
+                      targetFields="{!v.VehicleRecord }"
+                      mode="VIEW"/>
+    
+    <div class="vehicleRecordDetails ">
+        <div class="slds-text-heading_large">
+            <lightning:formattedText value="{!v.VehicleRecord.Name}" />
+        </div>
+    	<!--<lightning:card class="slds-text-heading_large" iconName="lightning:card" title="{!v.VehicleRecord.Name}">-->
+            <div class="slds-grid slds-gutters slds-wrap">
+            	<div class="slds-col slds-size_3-of-6 slds-m-small">
+                	<img src="{!v.VehicleRecord.Image__c}" alt="{!v.VehicleRecord.Name}"/>
+                </div>
+                
+                <div class="slds-col slds-size_1-of-2">
+                    <h3 class="slds-text-heading_medium slds-border_bottom">For <lightning:formattedText value="{!v.VehicleRecord.Listed_As__c}"/></h3><br/>
+                    <div class="slds-grid slds-gutters slds-wrap">
+                        <div class="slds-col slds-var-m-bottom_x-small slds-size_1-of-3">
+                            <h3 class="slds-text-heading_small slds-border_bottom">Price</h3>
+                            <h3 class="slds-text-heading_small"><lightning:formattedNumber value="{!v.VehicleRecord.Price__c}" style="currency" currencyCode="USD"/></h3>
+                        </div>
+                        <div class="slds-col slds-var-m-bottom_x-small slds-size_1-of-3">
+                            <h3 class="slds-text-heading_small slds-border_bottom">Mileage</h3>
+                            <h3 class="slds-text-heading_small"><lightning:formattedNumber value="{!v.VehicleRecord.Mileage__c}" /></h3>
+                        </div>
+                        <div class="slds-col slds-var-m-bottom_x-small slds-size_1-of-3">
+                            <h3 class="slds-text-heading_small slds-border_bottom">Type</h3>
+                            <h3 class="slds-text-heading_small"><lightning:formattedText value="{!v.VehicleRecord.Type__c}" /></h3>
+                        </div>
+                        <div class="slds-col slds-var-m-bottom_x-small slds-size_1-of-3">
+                            <h3 class="slds-text-heading_small slds-border_bottom">Transmission</h3>
+                            <h3 class="slds-text-heading_small"><lightning:formattedText value="{!v.VehicleRecord.Transmission__c}" /></h3>
+                        </div>
+                    </div>
+            	</div>
+            </div>
+        <!--</lightning:card>-->
+    </div>
+    
+    <lightning:card class="slds-border_bottom" title="For More Information">
+    	<div class="slds-grid slds-wrap">
+            <div class="slds-size_1-of-12"></div>
+            <div class="slds-size_11-of-12">
+            	<p>If you would like to know more about this vehicle, please call or email to set an appointment with a salesperson.</p>
+            	<p>To send a message to the salesperson responsible for this vehicle fill out the boxes below.</p>
+            </div>
+            <div class="slds-size_1-of-12"></div>
+            <div class="slds-size_6-of-12">
+                <lightning:input name="customerName" label="Your Name" placeholder="John Deer"/>
+            	<lightning:input type="email" name="customerEmail" placeholder="youraddress@company.com" label="Your Email"/>
+                <lightning:input name="inputMessage" label="Your Message to the Owner" placeholder="type here..."/> <br/>
+                <lightning:button label="Send Message" title="Send Message to Employee" onclick="{!c.sendMessage}"/>
+            </div>
+        	
+        </div>
+    </lightning:card>
+    
+    <!-- Display Lightning Data Service errors, if any -->
+    <aura:if isTrue="{!not(empty(v.recordError))}">
+        <div class="recordError">
+                {!v.recordError}</div>
+    </aura:if>
+    
+    
+   
+</aura:component>
