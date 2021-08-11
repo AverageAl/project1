@@ -1,4 +1,4 @@
-public class EmployeesListWithControllerz
+public class EmployeesListWithController
 {
 	public static List<Employee__c> getEmployees()   
     {
