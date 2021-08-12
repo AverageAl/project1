@@ -10,7 +10,7 @@ public class MyMassInventoryListController {
         //else return the enquiry
         String searchKey = String.isBlank(searchWord) ? '%%' : searchWord + '%';
         
-        returnList = [SELECT Name, Year__c, Price__c FROM Vehicle__c WHERE Name LIKE :searchWord LIMIT 20];
+        returnList = [SELECT Name, Year__c, Price__c FROM Vehicle__c WHERE Name LIKE :searchKey LIMIT 20];
         
         return returnList;
         
