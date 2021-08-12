@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:attribute name="openPosition" type="string"/>
+    <div>
+    	{openPosition.Job_Title__c}
+        {openPosition.Job_Description__c}
+    </div>
+</aura:component>
