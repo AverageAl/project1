@@ -1,0 +1,50 @@
+<aura:component controller ="JobApexController" implements="forceCommunity:availableForAllPageTypes">
+
+    <aura:attribute name="openPositions" type="Open_Position__c[]"/>
+    <aura:attribute name="display" type="Boolean" default="false"/>
+    <aura:attribute name="ButtonLabel" type="String" default="Show Open Positions"/>
+    <aura:attribute name="display2" type="Boolean" default="false"/>
+    <aura:attribute name="ButtonLabel2" type="String" default="Apply"/>
+	
+    <aura:if isTrue="{!v.display}">
+    	<div class="slds-box">
+    		<div class="slds-text-heading_large">Open Positions</div>
+        	<br/>
+        	<lightning:accordion aura:id="accordion">
+            	<aura:iteration items="{!v.openPositions}" var="openPosition">
+                	<lightning:accordionSection label="{!openPosition.Job_Title__c}">
+                        <lightning:recordViewForm objectApiName="Open_Position__c" recordId="{!openPosition.Id}" >
+                            <lightning:outputfield fieldName="Job_Description__c"/>
+                            <lightning:outputfield fieldName="salary__c"/>
+                        </lightning:recordViewForm>
+                    	<lightning:button label="{!v.ButtonLabel2}" onclick="{!c.flipbool}"></lightning:button>
+                        <aura:if isTrue="{!v.display2}">
+                        	    <lightning:card>
+        							<div class="slds-text-heading_large">Record Edit Form(in Save Mode)</div>
+    								<lightning:recordEditForm objectApiName="job_submission__c">
+                                    <div class="slds-grid">
+                                    	<div class="slds-col slds-size_1-of-3">
+                                    		<lightning:inputField fieldName="First_Name__c"/>
+                                    		<lightning:inputField fieldName="Last_Name__c"/>
+                                    	</div>
+                						<div class="slds-col slds-size_1-of-3">
+                    						<lightning:inputField fieldName="Email__c"/>
+                   	 						<lightning:inputField fieldName="Phone_Number__c"/>
+                						</div>
+                						<div class="slds-col slds-size_1-of-3">
+                   	 						<lightning:inputField fieldName="Work_Experience__c"/>
+                                            <lightning:inputField fieldName="Open_Position__c" value="{!openPosition.Id}" disabled="true"/>
+                						</div>
+            						</div>
+            						<lightning:button type="submit" label="Save Record"/>
+            						<lightning:button type="reset" label="Cancel"/>
+        							</lightning:recordEditForm>
+    							</lightning:card>
+                        </aura:if>
+                	</lightning:accordionSection>
+            	</aura:iteration>
+        	</lightning:accordion>
+    	</div>
+    </aura:if>
+    <lightning:button variant="brand" label="{!v.ButtonLabel}" onclick="{!c.getOpenPositions}"/>
+</aura:component>
