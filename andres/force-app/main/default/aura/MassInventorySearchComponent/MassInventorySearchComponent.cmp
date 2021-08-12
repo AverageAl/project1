@@ -25,7 +25,7 @@
         <!-- Inventory List goes here -->
         <lightning:datatable data="{!v.invtList}"
                              columns="{!v.displayColumns}"
-                             keyField="Name"
+                             keyField="Id"
                              hideCheckboxColumn="true" />
                              
     </lightning:card> 
