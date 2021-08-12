@@ -1,6 +1,6 @@
 public class HomePageController {
 	@AuraEnabled
-    public static List<Id> makeVehicleQuery(String query){
+    public static List<Vehicle__c> makeVehicleQuery(String query){
         List<Vehicle__c> vehicles = new List<Vehicle__c>();
         try{
         	vehicles = Database.query(query);    
@@ -10,6 +10,6 @@ public class HomePageController {
         for(Vehicle__C v : vehicles){
             ids.add(v.Id);
         }
-        return ids;
+        return vehicles;
     }
 }
