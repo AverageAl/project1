@@ -47,13 +47,14 @@ User Story 8: Whole project on repository with good branching
 
 User Story 9: Experience Cloud site has uniform styling/branding (using CSS, SLDS, HTML, Aura)
 
+
 User Story 10: Live demo includes
   <br/>
       (1) clone the master branch of your repo; 
   <br/> 
       (2) push the customization to a fresh org 
 
---
+
 
 Bonus: deploy the site in the new org (can be much trickier) 
 
