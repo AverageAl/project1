@@ -1,6 +1,6 @@
 
 
-@istest(seeAllData='true') class TestEmployeesListWithController
+@istest(seeAllData='true') class testEmployeesListWithController
 {	
 
     // This method positively tests the controller class for success with a single record insert.
