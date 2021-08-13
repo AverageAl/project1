@@ -1,0 +1,72 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller = "HomePageController">
+    <aura:attribute name="queriedVehicles" type="Vehicle__c[]"/>
+    <aura:attribute name="listedAsOptions" type="List" default="[
+        {'label': 'None', 'value': ''},
+    	{'label': 'For Sale', 'value': 'For Sale'},
+        {'label': 'For Rent', 'value': 'For Rent'}, 
+        ]"/>
+    <aura:attribute name="transmissionOptions" type="List" default="[
+        {'label': 'None', 'value': ''},
+        {'label': 'Automatic', 'value': 'Automatic'},
+        {'label': 'Manual', 'value': 'Manual'},
+        ]"/>
+    <aura:attribute name="typeOptions" type="List" default="[
+    	{'label': 'None', 'value': ''},
+        {'label': 'Sedan', 'value': 'Sedan'},
+        {'label': 'Coupe', 'value': 'Coupe'},
+        {'label': 'Hatchback', 'value': 'Hatchback'},
+        {'label': 'Mini-van', 'value': 'Mini-van'},
+        {'label': 'SUV', 'value': 'SUV'},
+        {'label': 'Truck', 'value': 'Truck'},
+        ]"/>
+    <aura:attribute name="makeAndModel" type="String" default=""/>
+    <aura:attribute name="listedAs" type="String" default=""/>
+    <aura:attribute name="mileage" type="String" default=""/>
+    <aura:attribute name="price" type="String" default=""/>
+    <aura:attribute name="transmission" type="String" default=""/>
+    <aura:attribute name="type" type="String" default=""/>
+    <aura:attribute name="year" type="String" default=""/>
+    <lightning:card variant="narrow" title="Search for vehicles">
+    	<div class="slds-grid slds-grid_align-space slds-gutters_large slds-box">
+    		<div class="slds-col slds-size_1-of-12">
+            	<lightning:input label="Make and Model" value="{!v.makeAndModel}"/>
+            </div>
+            <div class="slds-col slds-size_1-of-12">
+            	<lightning:comboBox name="listedAsBox" label="Listed As" value="{!v.listedAs}" options="{!v.listedAsOptions}"/>
+            </div>
+            <div class="slds-col slds-size_1-of-12">
+            	<lightning:input type="String" label="Mileage" value="{!v.mileage}"/>
+            </div>
+            <div class="slds-col slds-size_1-of-12">
+            	<lightning:input type="String" label="Price" value="{!v.price}"/>
+            </div>
+            <div class="slds-col slds-size_1-of-12">
+            	<lightning:comboBox name="transmissionBox" label="Transmission Type" value="{!v.transmission}" options="{!v.transmissionOptions}"/>
+            </div>
+            <div class="slds-col slds-size_1-of-12">
+            	<lightning:comboBox name="typeBox" label="Vehicle Type" value="{!v.type}" options="{!v.typeOptions}"/>
+            </div>
+            <div class="slds-col slds-size_1-of-12">
+           		<lightning:input type="String" label="Year" value="{!v.year}"/>
+    		</div>
+            <div class="slds-col slds-size_1-of-12">
+            	<lightning:button label="Search" variant="brand" onclick="{!c.getQueriedVehicles}"/>
+            </div>
+    	</div>
+    </lightning:card>
+    <br/>
+    <lightning:accordion>
+    	<aura:iteration items="{!v.queriedVehicles}" var="vehicle">
+            <lightning:accordionSection label="{!vehicle.Year__c + ' ' + vehicle.Name}">
+            	<div class="slds-grid">
+    				<div class="slds-col slds-size_1-of-6">
+            		</div>
+            		<div class="slds-col slds-size_1-of-6">
+        			</div>
+            		<div class="slds-col slds-size_1-of-6">
+            		</div>
+        			</div>
+            </lightning:accordionSection>
+    	</aura:iteration>
+    </lightning:accordion>
+</aura:component>
