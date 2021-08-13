@@ -1,5 +1,2 @@
-
-            </apex:pageBlockTable>
-        </apex:pageBlock>
-    </apex:form>
+<apex:page>
 </apex:page>
