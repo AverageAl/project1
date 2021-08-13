@@ -1,0 +1,83 @@
+<aura:component controller="SingleCarRecordApexController" implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes,force:hasRecordId,lightning:isUrlAddressable" access="global">
+    <!--<aura:attribute name="recordId" type="String"/>-->
+    <aura:attribute name="vehicleInfo" type="Vehicle__c"/>
+    
+    <!--retrieves the data from the specific recordId, as well as calls the onPageReferenceChange method-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <!--<aura:handler name="change" value="{!v.pageRefernce}" action="{!c.onPageRefernceChange}"/>-->
+    
+    <div class="vehicleRecordDetails ">
+        <div class="slds-grid slds-m-around_xx_small">
+        	<div class="slds-col slds-size_1-of-2 slds-text-heading_large">
+            	<lightning:formattedText value="{!v.vehicleInfo.Year__c +' ' +  v.vehicleInfo.Name}" />
+       	 	</div>
+            <div class="slds-col slds-size_1-of-2 slds-float_right">
+                <lightning:button class="back-button" label="Back" title="Return to Previous Page" onclick="{!c.returnToPreviousPage}"/>
+       	 	</div>
+        </div>
+        <br/>
+    	<!--<lightning:card class="slds-text-heading_large" iconName="lightning:card" title="{!v.VehicleRecord.Name}">-->
+            <div class="slds-grid slds-gutters slds-wrap">
+            	<div class="slds-col slds-size_3-of-6">
+                	<img src="{!v.vehicleInfo.Image__c}" alt="{!v.vehicleInfo.Name}"/>                  
+                </div>
+                
+                <div class="slds-col slds-size_1-of-2">
+                    <h3 class="slds-text-heading_medium slds-border_bottom">For <lightning:formattedText value="{!v.vehicleInfo.Listed_As__c}"/></h3><br/>
+                    <div class="slds-grid slds-gutters slds-wrap">
+                        <div class="slds-col slds-var-m-bottom_x-small slds-size_1-of-3">
+                            <h3 class="slds-text-heading_x_small slds-border_bottom">Price</h3>
+                            <h3 class="slds-text-heading_x_small"><lightning:formattedNumber value="{!v.vehicleInfo.Price__c}" style="currency" currencyCode="USD"/></h3>
+                        </div>
+                        <div class="slds-col slds-var-m-bottom_x-small slds-size_1-of-3">
+                            <h3 class="slds-text-heading_x_small slds-border_bottom">Monthly Price</h3>
+                            <h3 class="slds-text-heading_x_small"><lightning:formattedNumber value="{!v.vehicleInfo.Price__c / 72}" style="currency" currencyCode="USD"/></h3>
+                        </div>
+                        <div class="slds-col slds-var-m-bottom_x-small slds-size_1-of-3">
+                            <h3 class="slds-text-heading_x_small slds-border_bottom">Year</h3>
+                            <h3 class="slds-text-heading_x_small"><lightning:formattedText value="{!v.vehicleInfo.Year__c}" /></h3>
+                        </div>
+                        <div class="slds-col slds-var-m-bottom_x-small slds-size_1-of-3">
+                            <h3 class="slds-text-heading_x_small slds-border_bottom">Mileage</h3>
+                            <h3 class="slds-text-heading_x_small"><lightning:formattedNumber value="{!v.vehicleInfo.Mileage__c}" /></h3>
+                        </div>
+                        <div class="slds-col slds-var-m-bottom_x-small slds-size_1-of-3">
+                            <h3 class="slds-text-heading_x_small slds-border_bottom">Type</h3>
+                            <h3 class="slds-text-heading_x_small"><lightning:formattedText value="{!v.vehicleInfo.Type__c}" /></h3>
+                        </div>
+                        <div class="slds-col slds-var-m-bottom_x-small slds-size_1-of-3">
+                            <h3 class="slds-text-heading_x_small slds-border_bottom">Transmission</h3>
+                            <h3 class="slds-text-heading_x_small"><lightning:formattedText value="{!v.vehicleInfo.Transmission__c}" /></h3>
+                        </div>
+                       
+                    </div>
+            	</div>
+            </div>
+        <!--</lightning:card>-->
+    </div>
+    
+    <lightning:card class="slds-border_bottom" title="For More Information">
+    	<div class="slds-grid slds-wrap">
+            <div class="slds-size_1-of-12"></div>
+            <div class="slds-size_10-of-12">
+            	<p>If you would like to know more about this vehicle, please call or email to set an appointment with a salesperson.</p>
+                <p>Simon's Auto Center is not responsible for any errors, omissions or inaccurate prices that may be reflected on this website. For accurate information and pricing on this or any of our vehicles, please contact us directly. Thank you for your consideration.<br/></p><br/>
+                <h3>Employee Name: <lightning:formattedText value="{!v.vehicleInfo.Lot__r.Employee__r.Name}"/></h3>
+                <h3>Phone Number:  <lightning:formattedPhone value="{!v.vehicleInfo.Lot__r.Employee__r.Phone_Number__c}"/></h3>
+                <h3>Email:         <lightning:formattedEmail value="{!v.vehicleInfo.Lot__r.Employee__r.Email__c}"/></h3>
+                <br/><p>When contacting an Employee please inform them of the make and model, year, and mileage of the vehicle you wish to learn more about.</p>
+            </div>
+            
+            <!--decided not to create a form since the user can simply click on the email and it will open a default mailing app that can be used to send a message-->
+            <!--<div class="slds-size_1-of-12"></div>
+            <div class="slds-size_6-of-12">
+                <lightning:input aura:id="customerName" name="customerName" label="Your Name" placeholder="John Deer"/>
+            	<lightning:input aura:id="customerEmail" type="email" name="customerEmail" placeholder="youraddress@company.com" label="Your Email"/>
+                <lightning:input aura:id="customerMessage" name="inputMessage" label="Your Message to the Owner" placeholder="type here..."/> <br/>
+                <lightning:button label="Send Message" title="Send Message to Employee" onclick="{!c.sendMessage}"/>
+            </div>-->
+        	
+        </div>
+    </lightning:card>
+    
+</aura:component>
