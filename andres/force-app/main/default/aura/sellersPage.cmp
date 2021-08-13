@@ -3,69 +3,73 @@
 	<aura:attribute name="newSellerRequest" type="Seller_Request__c"
 	 default="{ 'sobjectType': 'Seller_Request__c',
 					'First_Name__c': '',
-					'Last_Name__c': 0,
+					'Last_Name__c': '',
 					'Car_Model__c': '',
 					'Asking_Price__c': '',
-					'Model_year__c': false,
+					'Model_Year__c': false,
 					'Car_Brand__c': '',
 					'Email__c':'',
 					'Phone_Number__c':'',
 					'Mileage__c':'',
 					'Title_Status__c':'',
-					'car_condition__car':''}"/>
-						
+					'Car_Condition__car':''}"/>
 	<lightning:layout>
-		<lightning:layoutItem>	
-			<h1 class="slds-text-heading_label">Sell Here!</h1>				
-		</lightning:layoutItem>
-	</lightning:layout>
-	
-	 <form >
-        <lightning:layout>
-			<lightning:layoutItem title="Complete to Create a Seller Request">
-				<lightning:input aura:id="sellerForm" label="First Name"
-                             name="sellerFirstName"
-                             value="{!v.newSellerRequest.First_Name__c}"/>
-				 <lightning:input aura:id="sellerForm" label="Last Name"
-							 name="sellerLastName"
-							 value="{!v.newSellerRequest.Last_Name__c}"/>
-				 <lightning:input aura:id="sellerForm" label="Car Model"
-							 name="sellerCarModel"
-							 value="{!v.newSellerRequest.Car_Model__c}"/>
-				 <lightning:input aura:id="sellerForm" label="Asking Price"
-							 name="sellerAskingPrice"
-							 value="{!v.newSellerRequest.Asking_Price__c}"/>
-				<lightning:input aura:id="sellerForm" label="Model Year"
-                             name="sellerModelYear"
-                             value="{!v.newSellerRequest.Model_year__c}"/> 
-				<lightning:input aura:id="sellerForm" label="Car Brand"
-                             name="sellerCarBrand"
-                             value="{!v.newSellerRequest.Car_Brand__c}"/>
-				<lightning:input aura:id="sellerForm" label="Email"
-							 name="sellerEmail"
-							 value="{!v.newSellerRequest.Email__c}"/>
-				 <lightning:input aura:id="sellerForm" label="Phone Number"
-							 name="sellerPhoneNumber"
-							 value="{!v.newSellerRequest.Phone_Number__c}"/>
-				 <lightning:input aura:id="sellerForm" label="Mileage"
-							 name="sellerMileage"
-							 value="{!v.newSellerRequest.Mileage__c}"/>
-				 <lightning:input aura:id="sellerForm" label="Title Status"
-							 name="sellerTitleStatus"
-							 value="{!v.newSellerRequest.Title_Status__c}"/>
-				 <lightning:input aura:id="sellerForm" label="Car Condition"
-							 name="sellercarCondition"
-							 value="{!v.newSellerRequest.car_condition__c}"/>
-				
-				
-				<lightning:input aura:id="sellerForm" label="Phone Number"
-                             name="sellerPhoneNumber"
-                             value="{!v.newSellerRequest.Phone_Number__c}"/>
-                <lightning:button label="Create Seller Request" 
-								class="slds-m-top_medium"
-								variant="brand"
-								onclick="{!c.clickCreate}"/>								
-            </lightning:layoutItem>
-		</lightning:layout>
-    </form>	
+        <lightning:layoutItem padding="horizontal-small">
+            <div class="page-section page-header">
+                <h1 class="slds-text-heading_large">Welcome to Simon's Autos!</h1>
+                <h2 class="slds-text-heading_large">--------- Sell here! ---------</h2>
+            </div>
+    	</lightning:layoutItem>  
+    </lightning:layout>
+    <div aria-labelledby="newSellerform">
+        <!-- BOXED AREA -->
+        <fieldset class="slds-box slds-theme_default slds-container_small">
+    		<form >
+                <lightning:layout>
+                    <lightning:layoutItem title="Complete to Create a Seller Request">
+                        <lightning:input aura:id="sellerForm" label="First Name"
+                                     name="sellerFirstName"
+                                     value="{!v.newSellerRequest.First_Name__c}"/>
+                        <lightning:input aura:id="sellerForm" label="Last Name"
+                                     name="sellerLastName"
+                                     value="{!v.newSellerRequest.Last_Name__c}"/>
+                        <lightning:input aura:id="sellerForm" label="Car Model"
+                                     name="sellerCarModel"
+                                     value="{!v.newSellerRequest.Car_Model__c}"/>
+                        <lightning:input aura:id="sellerForm" label="Asking Price"
+                                     name="sellerAskingPrice"
+                                     value="{!v.newSellerRequest.Asking_Price__c}"/>
+                        <lightning:input aura:id="sellerForm" label="Model Year"
+                                     name="sellerModelYear"
+                                     value="{!v.newSellerRequest.Model_Year__c}"/> 
+                        <lightning:input aura:id="sellerForm" label="Car Brand"
+                                     name="sellerCarBrand"
+                                     value="{!v.newSellerRequest.Car_Brand__c}"/>
+                        <lightning:input aura:id="sellerForm" label="Email"
+                                     name="sellerEmail"
+                                     value="{!v.newSellerRequest.Email__c}"/>
+                        <lightning:input aura:id="sellerForm" label="Phone Number"
+                                     name="sellerPhoneNumber"
+                                     value="{!v.newSellerRequest.Phone_Number__c}"/>
+                        <lightning:input aura:id="sellerForm" label="Mileage"
+                                     name="sellerMileage"
+                                     value="{!v.newSellerRequest.Mileage__c}"/>
+                        <lightning:input aura:id="sellerForm" label="Title Status"
+                                     name="sellerTitleStatus"
+                                     value="{!v.newSellerRequest.Title_Status__c}"/>
+                        <lightning:input aura:id="sellerForm" label="Car Condition"
+                                     name="sellercarCondition"
+                                     value="{!v.newSellerRequest.Car_Condition__c}"/>
+                        <lightning:input aura:id="sellerForm" label="Phone Number"
+                                     name="sellerPhoneNumber"
+                                     value="{!v.newSellerRequest.Phone_Number__c}"/>
+                        <lightning:button label="Create Seller Request" 
+                                        class="slds-m-top_medium"
+                                        variant="brand"
+                                        onclick="{!c.clickCreate}"/>								
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </form>	
+        </fieldset>
+	</div>        
 </aura:component>
