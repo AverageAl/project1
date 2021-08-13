@@ -26,7 +26,7 @@ public class HomePageControllerTests {
             v.Year__c = '2001';
         }
         insert vList;
-        List<Id> results = HomePageController.makeVehicleQuery('');
+        List<Vehicle__c> results = HomePageController.makeVehicleQuery('');
         System.assertEquals(0, results.size());
     }
     @isTest
@@ -55,7 +55,7 @@ public class HomePageControllerTests {
             v.Year__c = '2001';
         }
         insert vList;
-        List<Id> results = HomePageController.makeVehicleQuery('SELECT Id FROM Vehicle__c');
+        List<Vehicle__c> results = HomePageController.makeVehicleQuery('SELECT Id FROM Vehicle__c');
         System.assertEquals(3, results.size());        
     }
 }
