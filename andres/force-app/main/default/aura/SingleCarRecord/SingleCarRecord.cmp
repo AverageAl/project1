@@ -1,30 +1,25 @@
-<aura:component controller="SingleCarRecordApexController" implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
-    
-     <aura:attribute name="record" type="Object"/>
-    <!--<aura:attribute name="VehicleRecord" type="Object" />-->
-    <aura:attribute name="recordError" type="String"/>
+<aura:component controller="SingleCarRecordApexController" implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes,force:hasRecordId,lightning:isUrlAddressable" access="global">
+    <!--<aura:attribute name="recordId" type="String"/>-->
     <aura:attribute name="vehicleInfo" type="Vehicle__c"/>
     
+    <!--retrieves the data from the specific recordId, as well as calls the onPageReferenceChange method-->
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
-    
-    
-    <!--<force:recordData aura:id="record"
-                      layoutType="FULL"
-                      recordId="{!v.recordId}"
-                      targetError="{!v.recordError}"
-                      targetRecord="{!v.record}"
-                      targetFields="{!v.VehicleRecord}"
-                      mode="VIEW"/>-->
-    
+    <!--<aura:handler name="change" value="{!v.pageRefernce}" action="{!c.onPageRefernceChange}"/>-->
     
     <div class="vehicleRecordDetails ">
-        <div class="slds-text-heading_large">
-            <lightning:formattedText value="{!v.vehicleInfo.Year__c +' ' +  v.vehicleInfo.Name}" />
+        <div class="slds-grid slds-m-around_xx_small">
+        	<div class="slds-col slds-size_1-of-2 slds-text-heading_large">
+            	<lightning:formattedText value="{!v.vehicleInfo.Year__c +' ' +  v.vehicleInfo.Name}" />
+       	 	</div>
+            <div class="slds-col slds-size_1-of-2 slds-float_right">
+                <lightning:button class="back-button" label="Back" title="Return to Previous Page" onclick="{!c.returnToPreviousPage}"/>
+       	 	</div>
         </div>
+        <br/>
     	<!--<lightning:card class="slds-text-heading_large" iconName="lightning:card" title="{!v.VehicleRecord.Name}">-->
             <div class="slds-grid slds-gutters slds-wrap">
-            	<div class="slds-col slds-size_3-of-6 slds-m-small">
-                	<img src="{!v.vehicleInfo.Image__c}" alt="{!v.vehicleInfo.Name}"/>
+            	<div class="slds-col slds-size_3-of-6">
+                	<img src="{!v.vehicleInfo.Image__c}" alt="{!v.vehicleInfo.Name}"/>                  
                 </div>
                 
                 <div class="slds-col slds-size_1-of-2">
@@ -64,14 +59,13 @@
     <lightning:card class="slds-border_bottom" title="For More Information">
     	<div class="slds-grid slds-wrap">
             <div class="slds-size_1-of-12"></div>
-            <div class="slds-size_11-of-12">
-            	<p>If you would like to know more about this vehicle, please call or send an email to set an appointment with a salesperson.</p>
-                <p>Simon's Auto Center is not responsible for any errors, omissions or inaccurate prices that may be reflected on this website. For accurate information and pricing on this or any of our vehicles, please contact us directly. Thank you for your consideration.<br/>
-</p><br/>
+            <div class="slds-size_10-of-12">
+            	<p>If you would like to know more about this vehicle, please call or email to set an appointment with a salesperson.</p>
+                <p>Simon's Auto Center is not responsible for any errors, omissions or inaccurate prices that may be reflected on this website. For accurate information and pricing on this or any of our vehicles, please contact us directly. Thank you for your consideration.<br/></p><br/>
                 <h3>Employee Name: <lightning:formattedText value="{!v.vehicleInfo.Lot__r.Employee__r.Name}"/></h3>
                 <h3>Phone Number:  <lightning:formattedPhone value="{!v.vehicleInfo.Lot__r.Employee__r.Phone_Number__c}"/></h3>
                 <h3>Email:         <lightning:formattedEmail value="{!v.vehicleInfo.Lot__r.Employee__r.Email__c}"/></h3>
-
+                <br/><p>When contacting an Employee please inform them of the make and model, year, and mileage of the vehicle you wish to learn more about.</p>
             </div>
             
             <!--decided not to create a form since the user can simply click on the email and it will open a default mailing app that can be used to send a message-->
@@ -86,12 +80,4 @@
         </div>
     </lightning:card>
     
-    <!-- Display Lightning Data Service errors, if any -->
-    <!--<aura:if isTrue="{!not(empty(v.recordError))}">
-        <div class="recordError">
-                {!v.recordError}</div>
-    </aura:if>-->
-    
-    
-   
 </aura:component>
