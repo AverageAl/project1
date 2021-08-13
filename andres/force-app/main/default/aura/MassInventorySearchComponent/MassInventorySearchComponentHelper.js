@@ -8,7 +8,7 @@
         ]);
         
         //creating the action
-        var action = component.get(c.fetchVehicle);
+        var action = component.get("c.fetchVehicle");
         action.setParams({
             "searchWord": searchVal
         });
