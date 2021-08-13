@@ -49,5 +49,9 @@
         <members>seller_request_emails/Seller_request_rejection_email</members>
         <name>Emailtemplate</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>ApprovalProcess</name>
+    </types>
     <version>52.0</version>
 </Package>
