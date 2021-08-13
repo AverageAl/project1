@@ -26,32 +26,22 @@
     <aura:attribute name="transmission" type="String" default=""/>
     <aura:attribute name="type" type="String" default=""/>
     <aura:attribute name="year" type="String" default=""/>
-    <lightning:card variant="narrow" title="Search for vehicles">
-    	<div class="slds-grid slds-grid_align-space slds-gutters_large slds-box">
-    		<div class="slds-col slds-size_1-of-12">
-            	<lightning:input label="Make and Model" value="{!v.makeAndModel}"/>
-            </div>
-            <div class="slds-col slds-size_1-of-12">
-            	<lightning:comboBox name="listedAsBox" label="Listed As" value="{!v.listedAs}" options="{!v.listedAsOptions}"/>
-            </div>
-            <div class="slds-col slds-size_1-of-12">
-            	<lightning:input type="String" label="Mileage" value="{!v.mileage}"/>
-            </div>
-            <div class="slds-col slds-size_1-of-12">
-            	<lightning:input type="String" label="Price" value="{!v.price}"/>
-            </div>
-            <div class="slds-col slds-size_1-of-12">
-            	<lightning:comboBox name="transmissionBox" label="Transmission Type" value="{!v.transmission}" options="{!v.transmissionOptions}"/>
-            </div>
-            <div class="slds-col slds-size_1-of-12">
-            	<lightning:comboBox name="typeBox" label="Vehicle Type" value="{!v.type}" options="{!v.typeOptions}"/>
-            </div>
-            <div class="slds-col slds-size_1-of-12">
-           		<lightning:input type="String" label="Year" value="{!v.year}"/>
-    		</div>
-            <div class="slds-col slds-size_1-of-12">
-            	<lightning:button label="Search" variant="brand" onclick="{!c.getQueriedVehicles}"/>
-            </div>
+    <div>
+        <img src="https://cunning-narwhal-qk9us8-dev-ed--c.visualforce.com/resource/1628787491000/logo"/>
+        <br/><br/>
+    </div>
+    <lightning:tabset selectedTabId="home">
+        <lightning:tab label="Home" id="home">
+                <lightning:card class="cardStyle" variant="narrow" title="Search for vehicles">
+    	<div class="slds-grid slds-grid_align-space slds-box">
+            <lightning:input class="inputStyle" label="Make and Model" value="{!v.makeAndModel}"/>
+            	<lightning:comboBox class="inputStyle" name="listedAsBox" label="Listed As" value="{!v.listedAs}" options="{!v.listedAsOptions}"/>
+            	<lightning:input class="inputStyle" type="String" label="Mileage" value="{!v.mileage}"/>
+            	<lightning:input class="inputStyle" type="String" label="Price" value="{!v.price}"/>
+            	<lightning:comboBox class="inputStyle" name="transmissionBox" label="Transmission Type" value="{!v.transmission}" options="{!v.transmissionOptions}"/>
+            	<lightning:comboBox class="inputStyle" name="typeBox" label="Vehicle Type" value="{!v.type}" options="{!v.typeOptions}"/>
+           		<lightning:input class="inputStyle" type="String" label="Year" value="{!v.year}"/>
+            	<lightning:button class="inputStyle" label="Search" variant="brand" onclick="{!c.getQueriedVehicles}"/>
     	</div>
     </lightning:card>
     <br/>
@@ -59,14 +49,19 @@
     	<aura:iteration items="{!v.queriedVehicles}" var="vehicle">
             <lightning:accordionSection label="{!vehicle.Year__c + ' ' + vehicle.Name}">
             	<div class="slds-grid">
-    				<div class="slds-col slds-size_1-of-6">
-            		</div>
-            		<div class="slds-col slds-size_1-of-6">
-        			</div>
-            		<div class="slds-col slds-size_1-of-6">
-            		</div>
-        			</div>
+                    <c:SingleCarRecord recordId="{!vehicle.Id}"/>
+        		</div>
             </lightning:accordionSection>
     	</aura:iteration>
     </lightning:accordion>
+        </lightning:tab>
+        <lightning:tab label="Browse All Cars" id="browse">
+            <c:MassInventorySearchComponent/>
+        </lightning:tab>
+        <lightning:tab label="Sell a Car" id="seller">
+        </lightning:tab>
+        <lightning:tab label="Careers" id="careers">
+            <c:Help_Wanted/>
+        </lightning:tab>
+    </lightning:tabset>
 </aura:component>
