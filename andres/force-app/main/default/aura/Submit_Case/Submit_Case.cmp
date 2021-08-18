@@ -1,0 +1,24 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+    <Lightning:card>
+			<lightning:recordEditForm objectApiName="Case"
+                                      onsuccess="{!c.showToast}">
+            <div class="slds-text-heading_large">Case Submission Form</div>
+    		<div class="slds-grid">
+                <div class="slds-col slds-size_1-of-3">
+                    <lightning:inputfield fieldName="SuppliedName"/>
+                    <lightning:inputfield fieldName="SuppliedCompany"/>
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                	<lightning:inputfield fieldName="SuppliedPhone"/>
+                    <lightning:inputfield fieldName="SuppliedEmail"/>
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                	<lightning:inputfield fieldName="Reason"/>
+                    <lightning:inputfield fieldName="Description"/>
+                </div>
+            </div>
+            <lightning:button type="submit" label="Save Record"/>
+            <lightning:button type="reset" label="Reset"/>
+    	</lightning:recordEditForm>
+	</Lightning:card>
+</aura:component>
