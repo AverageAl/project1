@@ -1,0 +1,14 @@
+<!-- Revature June 21, 2021 Salesforce Batch - Team Vanquish/Fab5 - Project 2 -->
+<!-- Recreating Project 1's Sellers_Page.page functionality using Lightning Aura Web Components -->
+<!-- Jeremy Davis -->
+
+<aura:component>
+    <aura:attribute name="sellerRequests" type="Seller_Request__c[]"/>
+    <lightning:card title="Seller Requests">
+        <p class="slds-p-horizontal_small">
+            <aura:iteration items="{!v.sellerRequests}" var="sellerRequest">
+                <c:sellerRequestItem sellerRequest="{!sellerRequest}"/>
+            </aura:iteration>
+        </p>
+    </lightning:card>
+</aura:component>
