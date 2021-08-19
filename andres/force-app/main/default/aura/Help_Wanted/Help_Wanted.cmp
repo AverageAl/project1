@@ -5,7 +5,6 @@
     <aura:attribute name="ButtonLabel" type="String" default="Show Open Positions"/>
     <aura:attribute name="display2" type="Boolean" default="false"/>
     <aura:attribute name="ButtonLabel2" type="String" default="Apply"/>
-	
     <aura:if isTrue="{!v.display}">
     	<div class="slds-box">
     		<div class="slds-text-heading_large">Open Positions</div>
@@ -13,15 +12,18 @@
         	<lightning:accordion aura:id="accordion">
             	<aura:iteration items="{!v.openPositions}" var="openPosition">
                 	<lightning:accordionSection label="{!openPosition.Job_Title__c}">
-                        <lightning:recordViewForm objectApiName="Open_Position__c" recordId="{!openPosition.Id}" >
+                        <lightning:recordViewForm objectApiName="Open_Position__c" 
+                                                  recordId="{!openPosition.Id}"
+                                                  >
                             <lightning:outputfield fieldName="Job_Description__c"/>
                             <lightning:outputfield fieldName="salary__c"/>
                         </lightning:recordViewForm>
                     	<lightning:button label="{!v.ButtonLabel2}" onclick="{!c.flipbool}"></lightning:button>
                         <aura:if isTrue="{!v.display2}">
                         	    <lightning:card>
-        							<div class="slds-text-heading_large">Record Edit Form(in Save Mode)</div>
-    								<lightning:recordEditForm objectApiName="job_submission__c">
+        							<div class="slds-text-heading_large">Job Application</div>
+    								<lightning:recordEditForm objectApiName="job_submission__c"
+                                                              onsuccess="{!c.showToast}">
                                     <div class="slds-grid">
                                     	<div class="slds-col slds-size_1-of-3">
                                     		<lightning:inputField fieldName="First_Name__c"/>

@@ -1,5 +1,5 @@
-<aura:application access="global" extends="force:slds">
-    <lightning:tabset selectedTabId="home">
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+	    <lightning:tabset selectedTabId="home">
         <lightning:tab label="Home" id="home">
             <c:SimonsAutoHomePage/>
         </lightning:tab>
@@ -12,4 +12,4 @@
             <c:Help_Wanted/>
         </lightning:tab>
     </lightning:tabset>
-</aura:application>
+</aura:component>

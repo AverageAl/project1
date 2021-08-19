@@ -1,4 +1,4 @@
-public class HomePageController {
+public with sharing class HomePageController {
 	@AuraEnabled
     public static List<Vehicle__c> makeVehicleQuery(String query){
         List<Vehicle__c> vehicles = new List<Vehicle__c>();
