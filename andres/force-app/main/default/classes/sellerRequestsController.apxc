@@ -1,0 +1,37 @@
+// Revature June 21, 2021 Salesforce Batch - Team Vanquish/Fab5 - Project 2
+// Recreating Project 1's Visualforce Sellers_Page.page functionality using Lightning Aura Web Components
+// Jeremy Davis
+
+public without sharing class sellerRequestsController {
+    
+    @AuraEnabled
+    public static List<Seller_Request__c> getsellerRequests() {
+        // Check to make sure all fields are accessible to this user
+        String[] fieldsToCheck = new String[] {
+            'Id', 'First_Name__c', 'Last_Name__c', 'Car_Model__c',
+            'Asking_Price__c', 'Model_Year__c', 'Car_Brand__c',
+            'Email__c', 'Phone_Number__c', 'Mileage__c',
+            'Title_Status__c', 'Car_Condition__c'
+         };
+         Map<String,Schema.SObjectField> fieldDescribeTokens =
+         	Schema.SObjectType.Seller_Request__c.fields.getMap();
+        for(String field : fieldsToCheck) {
+            if( ! fieldDescribeTokens.get(field).getDescribe().isAccessible()) {
+                throw new System.NoAccessException();
+            }
+        }
+        
+        return [SELECT Id, First_Name__c, Last_Name__c, Car_Model__c,
+                Asking_Price__c, Model_Year__c, Car_Brand__c,
+                Email__c, Phone_Number__c, Mileage__c,
+                Title_Status__c, Car_Condition__c
+                FROM Seller_Request__c];
+    }
+    
+    @AuraEnabled
+    public static Seller_Request__c saveSellerRequest(Seller_Request__c sellerRequest) {
+        // Perform isUpdateable() checking first, then
+        upsert sellerRequest;
+        return sellerRequest;
+    }
+}
